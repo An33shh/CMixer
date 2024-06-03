@@ -1,44 +1,44 @@
-# Tic-Tac-Toe
-This is a C++ implementation of a two-player Tic-Tac-Toe game with a text-based interface and an improved AI opponent.
+# CMixer: Procedural Music Generation in C++
 
-**Features:**
+This project explores procedural music generation using C++ and the SFML library.
 
-- Play against a strategic AI opponent.
-- Get a valid move prompt for user input.
-- Check for wins, ties, and invalid moves.
+## What is CMixer?
 
-**How to Play:**
+CMixer allows you to create and play melodies based on user-defined parameters and musical concepts.
 
-1. Compile the code using a C++ compiler (e.g., g++).
-2. Run the executable.
-3. The game will display the board and prompt you for your move (row col).
-4. Enter a valid empty position on the board (e.g., 1 2).
-5. The AI will make its move after yours.
-6. The game will continue until there is a winner or the board is full.
+## Features
 
-**Code Structure:**
+- Generate melodies based on scales (major, minor) and chords (future enhancement)
+- Integrate user input for melody parameters (root note, scale type, number of notes)
+- Play generated melodies using sound samples (WAV files)
+- (Optional) Implement rhythm generation with different time signatures and note values (future enhancement)
+- (Optional) Allow selection of instrument types and create harmony (future enhancement)
+- (Optional) Provide user interface for control and interaction (future enhancement)
 
-- `board.cpp`: Contains functions for displaying the board, checking win conditions, and checking for a full board.
-- `game.cpp`: Implements the main game loop, including player moves, AI moves, and win/tie checks.
+## Getting Started
 
-**AI Improvements:**
+### Prerequisites
 
-- Prioritizes winning moves for the computer.
-- Blocks the opponent's winning moves.
-- Includes a center square preference (if no immediate win/block is possible).
+- C++ compiler (e.g., g++)
+- SFML library ([Download SFML](https://www.sfml-dev.org/download.php))
+- WAV files for instrument sounds (place them in an "instruments" folder within the project directory)
 
-**Future Enhancements:**
+### Compile and Run
 
-- Difficulty levels for the AI.
-- Graphical user interface.
-- Player symbol selection (X or O).
-- Win/loss tracking.
+1. Compile the code using your C++ compiler with SFML libraries linked:
+    ```bash
+    g++ -o CMixer CMixer.cpp -lsfml-audio -lsfml-graphics
+    ```
+2. Run the executable (CMixer).
 
-**Compiling and Running:**
+## Current Functionality
 
-```bash
-g++ -o tic_tac_toe board.cpp game.cpp  # Replace with your compiler
-./tic_tac_toe
+- The program generates a melody based on default parameters (C4 major scale, 16 notes, random durations).
+- You can modify the code to experiment with different scales, number of notes, and potentially integrate rhythm generation (commented sections).
 
+## Future Enhancements
 
-** Enjoy playing Tic-Tac-Toe!
+- Implement rhythm generation for more complex musical structures.
+- Generate multiple melodies for harmony and assign them to different instruments using separate sound libraries.
+- Create a user interface for parameter control, instrument selection, and saving/loading presets.
+- Explore advanced techniques like Markov chains, chord progressions, and evolutionary algorithms for more sophisticated music generation.
